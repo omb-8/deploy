@@ -13,4 +13,5 @@ python-dotenv
 pypdf
 langgraph
 typing-extensions
+pysqlite3-binary
 
