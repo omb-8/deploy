@@ -4,6 +4,7 @@ from langchain_core.messages import HumanMessage, AIMessage
 __import__('pysqlite3')
 import sys
 sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+import sqlite3
 
 # Load documents and initialize components
 documents = load_and_split_document("/Users/maryam/Documents/UWF/our/chatbot/22_studenthandbook-22-23_f2.pdf")
