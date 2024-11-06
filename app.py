@@ -2,9 +2,10 @@ import streamlit as st
 from backend import load_and_split_document, initialize_retriever, create_rag_chain, setup_workflow
 from langchain_core.messages import HumanMessage, AIMessage
 __import__('pysqlite3')
+import pysqlite3
 import sys
-sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
-import sqlite3
+
+sys.modules["sqlite3"] = pysqlite3
 
 # Load documents and initialize components
 documents = load_and_split_document("/Users/maryam/Documents/UWF/our/chatbot/22_studenthandbook-22-23_f2.pdf")
