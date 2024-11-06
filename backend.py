@@ -33,7 +33,7 @@ def load_and_split_document(filepath):
 
 # Initialize vector store and retriever
 def initialize_retriever(documents):
-    vectorstore = Chroma.from_documents(documents=documents, embedding=gemini_embeddings)
+    vectorstore = Chroma.from_documents(documents=documents, embedding=gemini_embeddings, persist_directory=None)
     retriever = vectorstore.as_retriever()
     return retriever
 
