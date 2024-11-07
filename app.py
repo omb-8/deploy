@@ -2,6 +2,9 @@ import streamlit as st
 from backend import load_and_split_document, initialize_retriever, create_rag_chain, setup_workflow
 from langchain_core.messages import HumanMessage, AIMessage
 
+x = st.slider('Select a value')
+st.write(x, 'squared is', x * x)
+
 # Load documents and initialize components
 documents = load_and_split_document("/Users/maryam/Documents/UWF/our/chatbot/22_studenthandbook-22-23_f2.pdf")
 retriever = initialize_retriever(documents)
