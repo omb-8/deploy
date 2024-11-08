@@ -13,4 +13,6 @@ python-dotenv
 pypdf
 langgraph
 typing-extensions
+pandas
+scikit-learn
 
