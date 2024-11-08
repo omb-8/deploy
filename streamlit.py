@@ -18,9 +18,6 @@ from dotenv import load_dotenv
 # Configure API key
 load_dotenv()
 api_key = os.getenv("GOOGLE_API_KEY")
-
-print("API Key:", api_key)
-
 os.environ["GOOGLE_API_KEY"] = api_key
 
 # Initialize the Google Generative AI model
@@ -28,7 +25,7 @@ gemini_embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001")
 model = ChatGoogleGenerativeAI(model="gemini-1.0-pro", convert_system_message_to_human=True)
 
 # Load the document
-document_loader = PyPDFLoader("/Users/olivi/OneDrive/Documents/FreshStart_Space/22_studenthandbook-22-23_f2.pdf")
+document_loader = PyPDFLoader("/Users/maryam/Documents/UWF/our/chatbot/22_studenthandbook-22-23_f2.pdf")
 doc = document_loader.load()
 
 # Split documents
@@ -125,3 +122,4 @@ if st.button("Submit"):
         st.write("Chatbot:", result["answer"])
     else:
         st.write("Please enter a question.")
+
